@@ -1,9 +1,9 @@
-@primary-bg-color: #103108;
-@primary-tx-color: #fff;
-@secondary-bg-color: #fff;
-@secondary-tx-color: #333;
+@primary-bg-color: #a0285e;
+@primary-tx-color: #e1ab4c;
+@secondary-bg-color: #e1ab4c;
+@secondary-tx-color: #a0285e;
 
-@primary-shadow: #000;
+@primary-shadow: #e1ab4c;
 
 @display_breaks : {
     md: 720px;
@@ -11,37 +11,47 @@
     xlg: 1201px;
 }
 
-
 @import "header.less";
-@import "grid.less";
-@import "form.less";
+@import "aside.less";
 @import "cards.less";
+@import "footer.less";
+
 
 * {
     box-sizing: border-box;
 }
 
-html{
-    height:100%;
+html {
+    height: 100%;
 }
 
 body {
-    min-height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
+    padding: 10px;
     margin: 0;
-    padding: 0;
-    background-color: @secondary-bg-color;
     color: @secondary-tx-color;
+    background-color: @secondary-bg-color;
+    background-image: url(../public/img/heropanel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover all;
 }
 
-.hero {
-    img {
-        width:100%;
-        object-fit: cover;
+
+
+@media (min-width: 600px) {
+    .image {
+        width: 48%;
     }
 }
 
-.fullimg {
-    width:100%;
-    object-fit: cover;
+@media (min-width: 900px) {
+    .image {
+        width: 31%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .image {
+        width: 23.5%;
+    }
 }

@@ -1,9 +1,7 @@
-<section class="todoCards">
-    {{#each todos}}
+<section class="card-container">
+    {{#each cards}}
     <div class="card">
-        <img src="{{imgUrl}}" alt="{{title}}" />
-        <h3>{{title}}</h3>
-        <p>{{content}}</p>
+        <img alt="{{title}}" src="{{imgUrl}}" />
     </div>
     {{/each}}
 </section>

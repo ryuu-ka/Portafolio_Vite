@@ -1,117 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <title>Landing Page {{title}}</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
     <link rel="stylesheet" href="less/style.less">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    {{> headers}}
-    <main>
-        <section class="hero">
-            <div class="textContent">
-                <h2>Generalidades</h2>
-                <p>
-                    Texto de presentación del candidato
-                    <img src="public/poc_assets_vite.jpg" />
-                </p>
-            </div>
-            <div class="boxmodel">
-                <img src="https://picsum.photos/id/453/1200/640" alt="Foto del candidato" />
-            </div>
-            <div class="roundbtn">
-                +
-            </div>
-        </section>
-        <section id="logros" class="grid bg-grey">
-            <div class="row reverse width960">
-                <section class="col-6 col-m-6 col-x-4 stretch padding">
-                    <h2>Logros</h2>
-                    <ul class="grandList">
-                        <li>Logro 1</li>
-                        <li>Logro 2</li>
-                        <li>Logro 3</li>
-                    </ul>
-                </section>
-                <section class="col-6 col-m-6 col-x-8">
-                    <img class="fullimg" src="https://picsum.photos/id/200/640/640" alt="Foto Panel Izquierdo" />
-                </section>
-            </div>
-            <div class="row width960">
-                <section class="col-6 col-m-6 offset-m-3` stretch padding">
-                    <h2>Contactanos</h2>
-                    <form class="col-6 col-m-6 modern">
-                        <div class="field">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" />
-                        </div>
-                        <div class="field">
-                            <label for="correo">Correo</label>
-                            <input type="email" id="correo" name="correo" />
-                        </div>
-                        <div class="field">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje"></textarea>
-                        </div>
-                        <div class="actions">
-                            <input type="submit" value="Enviar" />
-                        </div>
-                    </form>
-                </section>
-                <section class="col-6 col-m-6">
-                    <img class="fullimg" src="https://picsum.photos/id/250/640/640" alt="Foto Panel Izquierdo" />
-                </section>
-            </div>
-            <div class="row padding reverse">
-                <section class="col-4 text-center">
-                    <quote>
-                        <p>Texto de la cita 1</p>
-                        <cite>Nombre de la cita 1</cite>
-                    </quote>
-                </section>
-                <section class="col-4 text-center">
-                    <quote>
-                        <p>Texto de la cita 2</p>
-                        <cite>Nombre de la cita 1</cite>
-                    </quote>
-                </section>
-                <section class="col-4 text-center">
-                    <quote>
-                        <p>Texto de la cita 3</p>
-                        <cite>Nombre de la cita 1</cite>
-                    </quote>
-            </div>
-            <div class="row">
-                <div class="col-6 col-m-10">
-                    <img class="" style="object-fit: cover; width:100%" src="https://picsum.photos/id/251/1200/480"
-                        style="height:480px;">
-                </div>
-            </div>
-        </section>
-        <section id="formacion">
-            <h2>Formación</h2>
-            <ul>
-                <li>Formación 1</li>
-                <li>Formación 2</li>
-                <li>Formación 3</li>
-            </ul>
-            <div class="roundbtn">
-                +
-            </div>
-        </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Correo: </p>
-        </section>
-       {{> cards}}
-    </main>
+    <header>
+        <h1>Portafolio</h1>
+    </header>
+    <div class="container">
+        <aside>
+            <img src="img/perfil.jpg" alt="perfil">
+            <section>
+                <strong>
+                    <h4>Esther Orellana</h4>
+                    <p>Desarrolladora Web</p>
+                    <p>Santa Rosa de Copan, Honduras</p>
+                    {{> rd}}
+                </strong>
+            </section>
+        </aside>
+        <main>
+            <div id="msg-bienvenida"></div>
+            <h3>Sobre Mi</h3>
+            <p><strong>
+                    Yo me llamo Esther Alejandra Orellana Andrade, naci el 30 de junio de 2002, estoy estudiando
+                    ingenieria en ciencias de la computacion. <br>
+                    Me apasiona el mundo del desarrollo web y la programacion por la infinidad de posibilidades que
+                    ofrece, me especializo en c#, html, css y php. <br> <br>
+                </strong>
+            </p>
+            <h3>Proyectos</h3>
+            {{> cards}}
+            {{> cards}}
+            {{> cards}}
+        </main>
+    </div>
     <footer>
-
+        <p><strong>Copyright 2024 Alejandra Orellana</strong></p>
     </footer>
-
 </body>
-
 </html>
